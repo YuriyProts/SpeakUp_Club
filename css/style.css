@@ -379,15 +379,15 @@ textarea {
 .hero__badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
+    gap: 6px;
+    font-size: 0.8rem;
     font-weight: 500;
-    color: var(--coral);
-    background: var(--coral-glow);
-    padding: 8px 18px;
+    color: var(--slate-lt);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 6px 14px;
     border-radius: 100px;
-    border: 1px solid rgba(255, 107, 53, 0.2);
-    margin-bottom: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 24px;
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -427,26 +427,47 @@ textarea {
 .hero__stats {
     display: flex;
     align-items: center;
-    gap: 32px;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(27, 40, 56, 0.4) 0%, rgba(20, 30, 48, 0.6) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 24px 40px;
+    margin-top: 48px;
+    box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero__stat {
+    flex: 1;
+    text-align: center;
 }
 
 .hero__stat-value {
     display: block;
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     font-weight: 800;
     color: var(--white);
+    background: linear-gradient(135deg, var(--white) 30%, var(--slate-lt) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
 }
 
 .hero__stat-label {
     font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--slate);
 }
 
 .hero__stat-divider {
     width: 1px;
-    height: 40px;
-    background: var(--navy-600);
+    height: 48px;
+    background: rgba(255, 255, 255, 0.08);
 }
 
 /* Scroll hint */
@@ -1273,13 +1294,15 @@ textarea {
 
     .hero__stats {
         flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
+        gap: 16px;
+        align-items: center;
+        padding: 24px 20px;
     }
 
     .hero__stat-divider {
-        width: 40px;
+        width: 60px;
         height: 1px;
+        background: rgba(255, 255, 255, 0.08);
     }
 
     .hero__actions {
@@ -1306,6 +1329,7 @@ textarea {
     }
 
     .footer__inner {
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -1317,7 +1341,7 @@ textarea {
     }
 
     .footer__social {
-        align-items: center;
+        justify-content: center;
     }
 
     .footer__bottom {
